@@ -10,7 +10,7 @@ import {
   SubmitBtn,
 } from 'components/ContactForm/ContactForm.styled';
 
-export const ContactForm = () => {
+export const ContactForm = ({ onSubmitFormData }) => {
   const nameInputId = nanoid();
   const numberInputId = nanoid();
   const [name, setName] = useState('');
@@ -32,7 +32,7 @@ export const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    // onSubmitFormData(name, number);
+    onSubmitFormData(name, number);
     reset();
   };
 
