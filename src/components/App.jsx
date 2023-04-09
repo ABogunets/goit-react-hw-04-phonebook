@@ -52,7 +52,6 @@ export const App = () => {
       };
       setContacts([contact, ...contacts]);
     }
-    console.log('name, data :>> ', name, number);
   };
 
   const deleteContact = contactId => {
